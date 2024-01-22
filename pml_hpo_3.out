@@ -1,0 +1,21 @@
+3.7.16 (default, Jan 17 2023, 22:20:44) 
+[GCC 11.2.0]
+         fixed acidity  volatile acidity  citric acid  ...   pH  sulphates  alcohol
+quality                                                ...                         
+3                   10                10           10  ...   10         10       10
+4                   53                53           53  ...   53         53       53
+5                  681               681          681  ...  681        681      681
+6                  638               638          638  ...  638        638      638
+7                  199               199          199  ...  199        199      199
+8                   18                18           18  ...   18         18       18
+
+[6 rows x 11 columns]
+alpha, tol, solver, max_iter [1.0, 0.01, 'sparse_cg', 100] mean score 0.23456265956265954
+n_estimators, max_samples, max_features [500, 1.0, 5] mean score 0.3257566507566508
+n_estimators, criterion, max_depth [100, 'entropy', 10] mean score 0.3191086691086691
+Generalization score with hyperparameters tuning:
+0.568 ± 0.067
+Generalization score with hyperparameters tuning:
+0.572 ± 0.042
+Generalization score with hyperparameters tuning:
+0.577 ± 0.034
