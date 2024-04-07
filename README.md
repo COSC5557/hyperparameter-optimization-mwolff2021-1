@@ -52,6 +52,14 @@ Add your report and code to this repository. Bonus points if you can set up a
 Github action to automatically run the code and generate the report!
 
 ## References
+https://scikit-optimize.github.io/stable/modules/generated/skopt.BayesSearchCV.html
+https://thuijskens.github.io/2016/12/29/bayesian-optimisation/
+https://machinelearningmastery.com/what-is-bayesian-optimization/
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.cross_validate.html
+https://stackabuse.com/optimizing-models-cross-validation-and-hyperparameter-tuning-guide/
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html
+https://scikit-optimize.github.io/stable/modules/generated/skopt.BayesSearchCV.html
+
 https://blog.finxter.com/how-to-check-python-version-in-colab/
 https://thuijskens.github.io/2016/12/29/bayesian-optimisation/
 https://scikit-learn.org/stable/modules/grid_search.html
