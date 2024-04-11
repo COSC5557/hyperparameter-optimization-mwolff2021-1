@@ -52,6 +52,9 @@ Add your report and code to this repository. Bonus points if you can set up a
 Github action to automatically run the code and generate the report!
 
 ## References
+https://machinelearningmastery.com/scikit-optimize-for-hyperparameter-tuning-in-machine-learning/
+https://thuijskens.github.io/2016/12/29/bayesian-optimisation/
+
 https://scikit-optimize.github.io/stable/modules/generated/skopt.BayesSearchCV.html
 https://thuijskens.github.io/2016/12/29/bayesian-optimisation/
 https://machinelearningmastery.com/what-is-bayesian-optimization/
