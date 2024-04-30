@@ -52,6 +52,34 @@ Add your report and code to this repository. Bonus points if you can set up a
 Github action to automatically run the code and generate the report!
 
 ## References
+https://arccwiki.atlassian.net/wiki/spaces/DOCUMENTAT/pages/7504145/Miniconda
+https://stackoverflow.com/questions/42025173/best-way-to-execute-a-python-script-in-a-given-conda-environment
+https://builtin.com/articles/modulenotfounderror-no-module-named-sklearn
+https://www.delftstack.com/howto/python/modulenotfounderror-no-module-named-sklearn/
+https://researchdatapod.com/python-modulenotfounderror-no-module-named-sklearn/
+https://thinkincode.net/python/modulenotfounderror-no-module-named-scikit-learn/
+https://blog.finxter.com/fixed-modulenotfounderror-no-module-named-sklearn/
+https://builtin.com/articles/modulenotfounderror-no-module-named-sklearn
+https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
+https://scikit-learn.org/stable/install.html
+https://stackoverflow.com/questions/36404042/importerror-no-module-named-sklearn-python
+https://www.markaicode.com/resolving-the-no-module-named-sklearn-error-in-python/
+https://stackoverflow.com/questions/52118969/sklearn-module-not-found-in-anaconda
+https://bobbyhadz.com/blog/python-no-module-named-sklearn
+https://stackoverflow.com/questions/63649632/modulenotfounderror-no-module-named-sklearn
+https://machinelearningmastery.com/setup-python-environment-machine-learning-deep-learning-anaconda/
+https://www.anaconda.com/blog/using-pip-in-a-conda-environment
+https://stackoverflow.com/questions/38733220/difference-between-scikit-learn-and-sklearn-now-deprecated
+https://www.howtogeek.com/102468/a-beginners-guide-to-editing-text-files-with-vi/
+https://arccwiki.atlassian.net/wiki/spaces/DOCUMENTAT/pages/7504145/Miniconda
+https://sebhastian.com/python-no-module-named-sklearn/
+https://linuxize.com/post/how-to-copy-cut-paste-in-vim/
+https://stackoverflow.com/questions/68094835/how-to-load-anaconda-virtual-environment-from-slurm
+https://stackoverflow.com/questions/46113732/modulenotfounderror-no-module-named-sklearn
+https://stackoverflow.com/questions/57966943/how-do-i-import-scikit-learn-in-a-jupyter-notebook
+https://scikit-learn.org/stable/install.html
+https://stackoverflow.com/questions/67734105/package-installed-in-conda-but-module-not-found-how-is-that-possible
+
 https://machinelearningmastery.com/scikit-optimize-for-hyperparameter-tuning-in-machine-learning/
 https://thuijskens.github.io/2016/12/29/bayesian-optimisation/
 
