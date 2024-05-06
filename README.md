@@ -52,6 +52,7 @@ Add your report and code to this repository. Bonus points if you can set up a
 Github action to automatically run the code and generate the report!
 
 ## References
+https://scikit-optimize.github.io/stable/modules/generated/skopt.BayesSearchCV.html
 https://arccwiki.atlassian.net/wiki/spaces/DOCUMENTAT/pages/7504145/Miniconda
 https://stackoverflow.com/questions/42025173/best-way-to-execute-a-python-script-in-a-given-conda-environment
 https://builtin.com/articles/modulenotfounderror-no-module-named-sklearn
