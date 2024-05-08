@@ -43,8 +43,8 @@ import sys; print(sys.version)
 
 #read and display data
 data = pd.read_csv("winequality-red.csv", sep = ";")
-data
-
+pd.set_option('display.width', None)
+pd.set_option('max_colwidth', None)
 #display information about dataset for report
 data.columns
 print(data.groupby(['quality']).count())
@@ -59,7 +59,7 @@ x = data.drop(columns = ['quality'])
 #https://note.nkmk.me/en/python-package-version/
 #https://stackoverflow.com/questions/10214827/find-which-version-of-package-is-installed-with-pip
 y = data['quality']
-
+print("this is the one w 10 iter, 10 pts, 10 jobs, BayesSearchCV inside cross_validate call")
 ridge_opt = BayesSearchCV(linear_model.RidgeClassifier(),
     {
     "alpha": Real(1.0, 5.0, prior='log-uniform'),
@@ -67,7 +67,9 @@ ridge_opt = BayesSearchCV(linear_model.RidgeClassifier(),
     "solver": Categorical(["svd", "cholesky", "lsqr", "sparse_cg"]),
     "max_iter": Integer(100, 100000, prior='log-uniform'),
     },
-     n_iter=3,
+    n_iter = 50,
+    n_jobs = 10, 
+    n_points = 10,
      random_state=0,
      scoring = "balanced_accuracy"
 )
@@ -77,7 +79,9 @@ bagging_opt = BayesSearchCV(ensemble.BaggingClassifier(),
                "max_samples" : Real(0.01, 1.0, prior='log-uniform'),
                 "max_features" : Real(0.01, 1.0, prior='log-uniform'),
                 },
-        n_iter=3,
+         n_iter = 50,
+    n_jobs = 10, 
+    n_points = 10,
         random_state=0,
         scoring = "balanced_accuracy"
 
@@ -89,31 +93,29 @@ rf_opt = BayesSearchCV(ensemble.RandomForestClassifier(),
     "criterion" : Categorical(["gini", "entropy", "log_loss"]),
     "max_depth" : Integer(2, 10, prior='log-uniform')
         },
-        n_iter=3,
+         n_iter = 50,
+    n_jobs = 10, 
+    n_points = 10, 
         random_state=0,
         scoring = "balanced_accuracy"
 )
 
 def nested_resampling_bayesian(optimizer, x, y):
-     for i in range(0, 3): #3-fold outer cross-validation
-        x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y, test_size=0.2, random_state=42)
-        #10_fold inner resampling -- performs 10-fold cross-validation on each hyperparameter configuration and stores results
-        cv_results = cross_validate(
-           optimizer, x_train, y_train, cv=10, return_estimator=True, scoring = "balanced_accuracy"
-        )
-        cv_results = pd.DataFrame(cv_results)
-        print(cv_results)
-        cv_test_scores = cv_results["test_score"]
-        #display results
-        print(
-            "Generalization score with hyperparameters tuning:\n"
+    cv_results = cross_validate(
+        optimizer, x, y, return_estimator=True, scoring = "balanced_accuracy", n_jobs = -1
+    )
+    
+    cv_results_df = pd.DataFrame(cv_results)
+    print(cv_results_df)
+    cv_test_scores = cv_results_df["test_score"]
+    max_idx  = cv_results_df['test_score'].idxmax()
+    print(cv_results["estimator"][max_idx].best_estimator_)
+    #display results
+    print(
+    "Generalization score with hyperparameters tuning:\n"
             f"{cv_test_scores.mean():.3f} ± {cv_test_scores.std():.3f}"
-        )
-        optimizer.fit(x_train, y_train)
-        print(optimizer.score(x_test, y_test))
-        print(optimizer.best_estimator_)
-        print(optimizer.best_params_)
-        print(optimizer.best_score_)
+    )
+    print(cv_results_df.loc[cv_results_df['test_score'].idxmax()])
 
 nested_resampling_bayesian(ridge_opt, x, y)
 

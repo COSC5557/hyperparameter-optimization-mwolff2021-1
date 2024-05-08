@@ -7,5 +7,5 @@
 #SBATCH --partition=teton-gpu
 #SBATCH --nodes=1 
 #SBATCH --ntasks-per-node=16
-#SBATCH --mem=256GB
-python3 /home/mwolff3/untitled8.py > pml_hpo_4.txt
+#SBATCH --mem=5GB
+python3 /home/mwolff3/untitled8.py > pml_hpo_default.txt
