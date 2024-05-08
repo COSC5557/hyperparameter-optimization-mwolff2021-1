@@ -52,6 +52,11 @@ Add your report and code to this repository. Bonus points if you can set up a
 Github action to automatically run the code and generate the report!
 
 ## References
+https://stackoverflow.com/questions/48187625/slurm-job-history-get-full-length-jobname
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.cross_validate.html
+https://stackoverflow.com/questions/15741759/find-maximum-value-of-a-column-and-return-the-corresponding-row-values-using-pan
+https://www.geeksforgeeks.org/how-to-print-an-entire-pandas-dataframe-in-python/#
+https://datascienceparichay.com/article/pandas-set-column-width/
 https://scikit-optimize.github.io/stable/modules/generated/skopt.BayesSearchCV.html
 https://arccwiki.atlassian.net/wiki/spaces/DOCUMENTAT/pages/7504145/Miniconda
 https://stackoverflow.com/questions/42025173/best-way-to-execute-a-python-script-in-a-given-conda-environment
